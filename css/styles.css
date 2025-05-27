@@ -59,7 +59,10 @@ a {
 }
 
 .iconos {
+  padding-left: 0;
+  margin: 0;
   display: flex;
+  list-style: none;
   gap: 20px;
 }
 
