@@ -190,7 +190,6 @@ a {
   max-width: 800px;
   height: auto;
   display: block;
-  border: 10px solid rgb(23, 119, 34);
 }
 
 .home h1 {
@@ -278,7 +277,7 @@ figure figcaption ul {
   list-style: none;
 }
 
-figure figcaption ul li{
+figure figcaption ul li {
   font-size: 1rem;
   font-weight: bold;
 }
@@ -307,6 +306,61 @@ figure button {
 figure button:hover {
   background-color: rgb(15, 185, 128);
   border: 2px solid rgb(33, 111, 33);
+}
+
+/* MAIN PRODUCTOS API */
+
+.productos h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(18, 108, 77);
+  background-color: #eaf5e6;
+  border: 2px solid rgb(198, 226, 193);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  margin: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Merienda", cursive;
+  font-style: italic;
+  text-shadow: 1px 1px 1px #ccc;
+  transition: transform 0.3s ease;
+}
+
+.productos h2:hover {
+  transform: scale(1.02);
+  background-color: #d5f2d0;
+}
+
+#productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5625rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card {
+  border: 0.1875rem solid rgb(198, 226, 193);
+  border-radius: 0.625rem;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card figcaption ul li:first-child {
+  max-height: 2.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 /* MAIN CONTACTO */
@@ -465,32 +519,10 @@ button:hover {
   }
 }
 
-/* MAIN USER */
-
-.user {
-  background-image: url(../images/fondos/fondo_main.png);
-  background-size: cover;
-  margin: 100px 100px;
-  padding: 0px 40px;
-  text-align: center;
-  font-weight: 900;
-}
-
-.user div {
-  font-size: 2rem;
-}
-
 /* RESEÑAS */
 
-.clientes {
-  width: 100vw;
-  height: auto;
-  background-image: url(../images/fondos/fondo_main.png);
-  background-size: cover;
-}
-
 .clientes h1 {
-  margin-bottom: 14px;
+  margin-bottom: 0.5em;
   background-color: #535050;
   padding: 1rem;
   color: blanchedalmond;
@@ -535,13 +567,65 @@ button:hover {
   font-weight: normal;
 }
 
+/* RESEÑAS API */
+
+.resenas .clientes_satisfechos {
+  margin-top: 1em;
+}
+
+#contenido {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px); 
+  justify-content: center; 
+  gap: 15px;
+}
+
+#contenido .card {  
+  margin-top: -1em;
+  background-color: antiquewhite;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 350px;
+  box-sizing: border-box;
+}
+
+#contenido .card img {
+  max-width: 150px;
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contenido .card h5 {
+  margin: 0 0 0.3rem 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#contenido .card p {
+  font-size: 0.9rem;
+  margin: 0 0 0.2rem 0;
+  font-weight: normal;
+}
+
+#contenido .card p strong {
+  display: block;
+}
+
+
 /* FOOTER */
 
 .footer {
   background-image: url(../images/fondos/fondo_menu.png);
   background-size: cover;
   display: grid;
-  /* No es flexible hay que usar media queries */
   grid-template-columns: 0.8fr 0.7fr 0.9fr;
   margin: 0px;
   color: rgb(18, 108, 77);
@@ -591,3 +675,54 @@ button:hover {
     padding: 5px;
   }
 }
+
+/* CARRITO */
+
+.input-cantidad {
+  width: 60px;
+  min-width: 60px;
+  max-width: 70px;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+}
+
+.input-cantidad::-webkit-inner-spin-button,
+.input-cantidad::-webkit-outer-spin-button {
+  opacity: 1;
+  margin-left: 3px;
+}
+
+.nombre-producto {
+  white-space: normal;
+  word-break: break-word;
+  flex: 1 1 auto; 
+}
+
+
+@media (max-width: 300px) {
+  .nombre-producto {
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 476px) {
+  .nombre-producto {
+    font-size: 0.9rem;
+  }
+
+  .precio-producto {
+    font-size: 0.8rem;
+  }
+
+  .input-cantidad {
+    width: 55px;
+    font-size: 0.85rem;
+  }
+
+  #lista-carrito .btn-danger {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+

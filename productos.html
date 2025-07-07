@@ -40,17 +40,26 @@
     </div>
     <nav class="nav1">
       <ul class="flex-menu">
-        <li><a href="./index.html" target="_blank">HOME</a></li>
-        <li><a href="./productos.html" target="_blank">PRODUCTOS</a></li>
+        <li><a href="./index.html" target="_self">HOME</a></li>
+        <li><a href="./productos.html" target="_self">PRODUCTOS</a></li>
         <li><a href="./tips.html" target="_blank">TIPS</a></li>
         <li><a href="./resenas.html" target="_blank">RESEÑAS</a></li>
         <li><a href="./contacto.html" target="_blank">CONTACTO</a></li>
-        <div class="iconos">
-          <li><a href="./buscar.html" target="_blank"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-          <li><a href="./ubicacion.html" target="_blank"><i class="fa-solid fa-location-dot"></i></a></li>
-          <li><a href="./carrito.html" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a></li>
-          <li><a href="./user.html" target="_blank"><i class="fa-solid fa-user"></i></a></li>
-        </div>
+        <li>
+          <ul class="iconos">
+            <li><a href="./ubicacion.html" target="_blank"><i class="fa-solid fa-location-dot"></i></a></li>
+            <li>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalCarrito" class="position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-counter"
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+                </span>
+              </a>
+            </li>
+
+          </ul>
+        </li>
       </ul>
     </nav>
 
@@ -58,20 +67,15 @@
 
   <main class="productos">
 
-    <figure>
+    <figure id="producto">
       <img src="./images/plantas/abelia_compacta.webp" alt="imagen abelia compacta">
       <figcaption>
         <ul>
-          <li class="planta">
-            ABELIA COMPACTA
-          </li>
-          <li class="precio">
-            $12000
-          </li>
+          <li class="planta">ABELIA COMPACTA</li>
+          <li class="precio">$12000.00</li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="1" data-nombre="Abelia Compacta"
+              data-precio="12000.00.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -82,11 +86,10 @@
       <figcaption>
         <ul>
           <li class="planta">AECHMEA FASCIATA</li>
-          <li class="precio">$12000</li>
+          <li class="precio">$12000.00</li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="2" data-nombre="Aechmea Fasciata"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -97,11 +100,10 @@
       <figcaption>
         <ul>
           <li class="planta">AESCHYNANTHUS SPECIOSUS</li>
-          <li class="precio">$12000</li>
+          <li class="precio">$12000.00</li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="3" data-nombre="Aeschynanthus Speciosus"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -115,12 +117,11 @@
             ALEGRIAS DEL HOGAR
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="4" data-nombre="Alegrias del Hogar"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -134,12 +135,11 @@
             ALOE MACULATA
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="5" data-nombre="Aloe Maculata"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -153,12 +153,11 @@
             ALOE VERA
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="6" data-nombre="Aloe Vera"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -172,12 +171,11 @@
             ALTERNANTHERA
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="7" data-nombre="Alternanthera"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -191,12 +189,11 @@
             AMPELOPSIS
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="8" data-nombre="Ampelopsis"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -210,12 +207,11 @@
             ARALIA SHEFFLERA
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="9" data-nombre="Aralia Shefflera"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -229,12 +225,11 @@
             AZALEA DOBLE
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="10" data-nombre="Azalea Doble"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -248,12 +243,11 @@
             AZALEA SIMPLE
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="11" data-nombre="Azalea Simple"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -267,12 +261,11 @@
             BABY ROSE
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="12" data-nombre="Baby Rose"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -286,12 +279,11 @@
             BABY ROSE VARIEGADA
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="13" data-nombre="Baby Rose Variegada"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -308,9 +300,8 @@
             $5800
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="14" data-nombre="Buxus Sempervirens"
+              data-precio="5800.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -327,9 +318,8 @@
             $1600
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="15" data-nombre="Cactus"
+              data-precio="1600.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -346,9 +336,8 @@
             $48000
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="16" data-nombre="Cactus Especial"
+              data-precio="48000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -365,9 +354,8 @@
             $19000
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="17" data-nombre="Camelia Japónica"
+              data-precio="19000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -384,9 +372,8 @@
             $16000
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="18" data-nombre="Chamadorea Elegans"
+              data-precio="16000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -403,9 +390,8 @@
             $1900
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="19" data-nombre="Cineraria Maritima"
+              data-precio="1900.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -419,12 +405,11 @@
             CLIVIA
           </li>
           <li class="precio">
-            $12000
+            $12000.00
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="20" data-nombre="Clivia"
+              data-precio="12000.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -441,9 +426,8 @@
             $6900
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="21" data-nombre="Crasa Collar de Rubies"
+              data-precio="6900.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -460,9 +444,8 @@
             $1400
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="22" data-nombre="Crasas Echeverias"
+              data-precio="1400.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
@@ -479,13 +462,63 @@
             $4800
           </li>
           <li>
-            <a href="carrito.html" target="_blank">
-              <button type="button">Agregar</button>
-            </a>
+            <button type="button" class="agregar-carrito" data-id="23" data-nombre="Dietes Bicolor"
+              data-precio="4800.00">Agregar</button>
           </li>
         </ul>
       </figcaption>
     </figure>
+
+    <!-- <section class="multishop"> -->
+    <h2>Transfor Multishop</h2>
+
+    <div id="productos-container"></div>
+
+    <!-- MODAL CARRITO -->
+    <div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCarritoLabel">🛒 Carrito de Compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+
+          <div class="modal-body">
+            <ul id="lista-carrito" class="list-group mb-3"></ul>
+            <div id="resumen-carrito"
+              class="bg-light border rounded shadow-sm d-flex justify-content-between align-items-center px-3 py-3 mt-3 mb-4">
+              <strong>Total: <span id="total-carrito">$ 0.00</span></strong>
+              <button id="pagar-carrito" class="btn btn-success">Enviar pago
+              </button>
+            </div>
+
+            <!-- FORMULARIO DE PAGO (oculto inicialmente) -->
+            <form id="form-pago" style="display:none;" action="https://formspree.io/f/mqabjyow" method="POST"
+              target="_blank">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="correo" name="e-mail" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="3" readonly></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary"><i class="fas fa-credit-card me-2"></i>Pagar</button>
+              <button type="button" id="cancelar-pago" class="btn btn-secondary ms-2">Cancelar</button>
+            </form>
+          </div>
+          <div class="modal-footer" id="botones-carrito">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+            <button type="button" class="btn btn-danger" id="vaciar-carrito">Vaciar Carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
 
@@ -515,6 +548,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
+
+  <script src="./js/script.js"></script>
+
 
 </body>
 

@@ -40,18 +40,24 @@
         </div>
         <nav class="nav1">
             <ul class="flex-menu">
-                <li><a href="./index.html" target="_blank">HOME</a></li>
-                <li><a href="./productos.html" target="_blank">PRODUCTOS</a></li>
+                <li><a href="./index.html" target="_self">HOME</a></li>
+                <li><a href="./productos.html" target="_self">PRODUCTOS</a></li>
                 <li><a href="./tips.html" target="_blank">TIPS</a></li>
                 <li><a href="./resenas.html" target="_blank">RESEÑAS</a></li>
                 <li><a href="./contacto.html" target="_blank">CONTACTO</a></li>
                 <li>
                     <ul class="iconos">
-                        <li><a href="./buscar.html" target="_blank"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        </li>
                         <li><a href="./ubicacion.html" target="_blank"><i class="fa-solid fa-location-dot"></i></a></li>
-                        <li><a href="./carrito.html" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        <li><a href="./user.html" target="_blank"><i class="fa-solid fa-user"></i></a></li>
+                        <li>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalCarrito" class="position-relative">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span id="cart-counter"
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                </span>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
             </ul>

@@ -40,17 +40,26 @@
         </div>
         <nav class="nav1">
             <ul class="flex-menu">
-                <li><a href="./index.html" target="_blank">HOME</a></li>
-                <li><a href="./productos.html" target="_blank">PRODUCTOS</a></li>
-                <li><a href="./tips.html" target="_blank">TIPS</a></li>
-                <li><a href="./resenas.html" target="_blank">RESEÑAS</a></li>
-                <li><a href="./contacto.html" target="_blank">CONTACTO</a></li>
-                <div class="iconos">
-                    <li><a href="./buscar.html" target="_blank"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                    <li><a href="./ubicacion.html" target="_blank"><i class="fa-solid fa-location-dot"></i></a></li>
-                    <li><a href="./carrito.html" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a href="./user.html" target="_blank"><i class="fa-solid fa-user"></i></a></li>
-                </div>
+                <li><a href="./index.html" target="_self">HOME</a></li>
+                <li><a href="./productos.html" target="_self">PRODUCTOS</a></li>
+                <li><a href="./tips.html" target="_self">TIPS</a></li>
+                <li><a href="./resenas.html" target="_self">RESEÑAS</a></li>
+                <li><a href="./contacto.html" target="_self">CONTACTO</a></li>
+                <li>
+                    <ul class="iconos">
+                        <li><a href="./ubicacion.html" target="_blank"><i class="fa-solid fa-location-dot"></i></a></li>
+                        <li>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalCarrito" class="position-relative">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span id="cart-counter"
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
             </ul>
         </nav>
 
@@ -58,32 +67,32 @@
 
     <main>
         <p>FORMULARIO DE CONTACTO</p>
-        <form action="https://formspree.io/f/mkgrnqee" method="POST" class="formulario"> 
-        <div class="grupo-input">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-        </div>
+        <form action="https://formspree.io/f/mkgrnqee" method="POST" class="formulario">
+            <div class="grupo-input">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
 
-        <div class="grupo-input">
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
-        </div>
+            <div class="grupo-input">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
 
-        <div class="grupo-input">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+            <div class="grupo-input">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-        <div class="grupo-input">
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-        </div>
+            <div class="grupo-input">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
 
-        <div class="botones">
-            <button type="reset">Reestablecer</button>
-            <button type="submit">Enviar</button>
-        </div>
-    </form>
+            <div class="botones">
+                <button type="reset">Reestablecer</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
 
     </main>
 
